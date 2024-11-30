@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puligattu Sreevatsav | Software Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --github-bg: #0d1117;
+            --github-card-bg: #161b22;
+            --github-border: #30363d;
+            --github-text-primary: #c9d1d9;
+            --github-text-secondary: #8b949e;
+            --github-accent: #58a6ff;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            background-color: var(--github-bg);
+            color: var(--github-text-primary);
+            overflow-x: hidden;
+        }
+        .full-screen-container {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .github-card {
+            background-color: var(--github-card-bg);
+            border: 1px solid var(--github-border);
+            border-radius: 12px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        @keyframes slideIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0);
+            }
+        }
+        .animate-slide-in {
+            animation: slideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            opacity: 0;
+        }
+        .github-btn {
+            background-color: var(--github-accent);
+            color: white;
+            transition: background-color 0.2s ease;
+        }
+        .github-btn:hover {
+            background-color: #388bfd;
+        }
+        .profile-image {
+            border: 3px solid var(--github-border);
+        }
+        .terminal-text {
+            font-family: 'Courier New', monospace;
+            color: var(--github-text-secondary);
+        }
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            .profile-details {
+                text-align: center;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+            .btn-container {
+                flex-direction: column;
+                width: 100%;
+                gap: 1rem;
+            }
+            .btn-container a {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="full-screen-container">
+        <div class="github-card p-8 animate-slide-in">
+            <div class="flex profile-container items-start space-x-8">
+                <!-- <div class="flex-shrink-0">
+                    <img 
+                        src="/api/placeholder/300/300" 
+                        alt="Puligattu Sreevatsav" 
+                        class="w-64 h-64 rounded-full object-cover profile-image"
+                    >
+                </div> -->
+                <div class="profile-details flex-grow">
+                    <h1 class="text-4xl font-bold mb-2 text-white">Puligattu Sreevatsav</h1>
+                    <p class="terminal-text text-xl mb-4">@SDE3 | Software Engineer</p>
+                    
+                    <div class="bg-gray-800 p-4 rounded-md mb-6 text-sm">
+                        <code class="terminal-text">
+                            > Senior Software Development Engineer<br/>
+                            > Passionate about solving complex problems<br/>
+                            > Building innovative software solutions
+                        </code>
+                    </div>
+
+                    <div class="btn-container flex space-x-4 w-full">
+                        <a 
+                            href="https://in.linkedin.com/in/puligattu-sreevatsav" 
+                            target="_blank" 
+                            class="github-btn px-6 py-3 rounded-md text-center flex-1 hover:bg-opacity-90"
+                        >
+                            LinkedIn
+                        </a>
+                        <a 
+                            href="https://jioevents.com" 
+                            target="_blank" 
+                            class="github-btn px-6 py-3 rounded-md text-center flex-1 hover:bg-opacity-90"
+                        >
+                            JioEvents
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
